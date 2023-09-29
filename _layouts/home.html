@@ -31,6 +31,7 @@ layout: base
             {{ post.title | escape }}
           </a>
         </h3>
+        <!-- <li><span>{{ post.date | date: date_format }}</span> &raquo; <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li> -->
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
