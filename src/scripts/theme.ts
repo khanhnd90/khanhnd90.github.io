@@ -1,19 +1,26 @@
 const THEME_KEY = "theme";
 const LIGHT = "light";
 const DARK = "dark";
+type Theme = typeof LIGHT | typeof DARK;
 
-function getPreferredTheme(): string {
+function isTheme(value: unknown): value is Theme {
+  return value === LIGHT || value === DARK;
+}
+
+function getPreferredTheme(): Theme {
   const stored = localStorage.getItem(THEME_KEY);
-  if (stored) return stored;
+  if (isTheme(stored)) return stored;
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? DARK
     : LIGHT;
 }
 
 // Reuse the value already set by the inline FOUC-prevention script if available.
-let themeValue: string =
-  (window as unknown as { __theme?: { value: string } }).__theme?.value ??
-  getPreferredTheme();
+const initialTheme = (window as unknown as { __theme?: { value: string } })
+  .__theme?.value;
+let themeValue: Theme = isTheme(initialTheme)
+  ? initialTheme
+  : getPreferredTheme();
 
 function persist(): void {
   localStorage.setItem(THEME_KEY, themeValue);
@@ -67,4 +74,3 @@ window
     themeValue = matches ? DARK : LIGHT;
     persist();
   });
-
