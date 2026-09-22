@@ -69,4 +69,3 @@ export default {
     goHome: "Go back home",
   },
 } satisfies UIStrings;
-

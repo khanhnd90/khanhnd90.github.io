@@ -39,4 +39,3 @@ const config: ResolvedAstroPaperConfig = {
 };
 
 export default config;
-

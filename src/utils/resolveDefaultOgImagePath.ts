@@ -46,4 +46,3 @@ export function resolveDefaultOgImagePath(
 
   return getAssetPath(filename);
 }
-

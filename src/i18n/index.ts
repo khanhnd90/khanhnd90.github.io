@@ -16,4 +16,3 @@ for (const [path, mod] of Object.entries(modules)) {
 export function useTranslations(locale: string = "en"): UIStrings {
   return translations[locale] ?? translations["en"];
 }
-

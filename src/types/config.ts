@@ -134,4 +134,3 @@ export function defineAstroPaperConfig(
 ): AstroPaperConfig {
   return config;
 }
-

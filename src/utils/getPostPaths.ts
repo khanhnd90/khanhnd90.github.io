@@ -50,4 +50,3 @@ export function getPostUrl(
 ): string {
   return getRelativeLocaleUrl(locale, `posts/${getPostSlugPath(id, filePath)}`);
 }
-

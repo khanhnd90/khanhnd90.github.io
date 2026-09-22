@@ -20,4 +20,3 @@ export function getSortedPosts(posts: CollectionEntry<"posts">[]) {
         )
     );
 }
-

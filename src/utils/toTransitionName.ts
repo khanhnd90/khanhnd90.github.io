@@ -24,4 +24,3 @@ export const toTransitionName = (str: string): string => {
   if (!result) result = "post";
   return result;
 };
-

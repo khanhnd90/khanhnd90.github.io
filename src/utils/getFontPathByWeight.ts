@@ -20,4 +20,3 @@ export function getFontPathByWeight(
 
   return undefined;
 }
-

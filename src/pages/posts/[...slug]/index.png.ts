@@ -194,4 +194,3 @@ export const GET: APIRoute = async ({ props, url }) => {
     headers: { "Content-Type": "image/png" },
   });
 };
-

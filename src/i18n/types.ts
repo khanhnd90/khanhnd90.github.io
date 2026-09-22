@@ -67,4 +67,3 @@ export interface UIStrings {
     goHome: string;
   };
 }
-

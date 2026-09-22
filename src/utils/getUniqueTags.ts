@@ -26,4 +26,3 @@ export function getUniqueTags(posts: CollectionEntry<"posts">[]) {
     .sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
   return tags;
 }
-

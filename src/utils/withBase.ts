@@ -44,4 +44,3 @@ export function getAssetPath(path: string): string {
   }
   return baseRoot + normalizedPath;
 }
-

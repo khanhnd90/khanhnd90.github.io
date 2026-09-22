@@ -11,4 +11,3 @@ export function tplStr(
     return value !== undefined && value !== null ? String(value) : "";
   });
 }
-

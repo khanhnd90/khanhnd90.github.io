@@ -16,4 +16,3 @@ export const slugifyStr = (str: string): string => {
 };
 
 export const slugifyAll = (arr: string[]) => arr.map(str => slugifyStr(str));
-

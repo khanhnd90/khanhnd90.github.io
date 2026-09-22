@@ -166,4 +166,3 @@ export const GET: APIRoute = async context => {
     headers: { "Content-Type": "image/png" },
   });
 };
-
